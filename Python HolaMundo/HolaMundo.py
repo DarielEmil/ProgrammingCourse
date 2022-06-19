@@ -258,8 +258,11 @@ birthdays = {'Alice': 'Apr 1', 'Bob': 'Dec 12', 'Carol': 'Mar 4'}
 message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
 count = {}
 
-from typing import Text
+for x in message:
+    count.setdefault(x,0)
+    count[x] += 1
 
+print(count)
 # print("ALice" in birthdays.values())
 
 
@@ -440,7 +443,7 @@ print(A)
 #     "Busy": """ Sorry, can we do this later this week or next week? """,
 #     "Upsell": """ Would you consider making this a monthly donation? """
 # }
-import pyperclip, sys
+# import pyperclip, sys
 
 ''' if len(sys.argv) < 2:
     print('Usage: python myclip.py [keyphrase] - copy phrase text')
@@ -552,7 +555,7 @@ def PrintTable():
 
 #PrintTable()
 
-import zombiedice
+# import zombiedice
 
 
 # class MyZombie:
@@ -579,7 +582,6 @@ import zombiedice
 #     # Add any other zombie players here.
 # )
 
-
 def IsPhoneNumber(text):
     if len(text) != 12:
         return False
@@ -604,9 +606,10 @@ def IsPhoneNumber(text):
 
     return True
 
-#print(IsPhoneNumber('405-555-4242'))
+# print(IsPhoneNumber('405-555-4242'))
 
-Message = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
+# Message = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
+
 
 # for i in range(len(Message)):
 #     Chunk = Message[i:i+12]
@@ -615,5 +618,99 @@ Message = 'Call me at 415-555-1011 tomorrow. 415-555-9999 is my office.'
 #         print('Phone number found: ' + Chunk)
 #print('Done')
 
+
+import re 
+
+# phoneNumberRegex= re.compile(r'(\(\d\d\d-\d\d\d\))-(\d\d\d\d)')
+
+# mo = phoneNumberRegex.search('My name is 415-555-4242') 
+
+mySecretKey = re.compile(r'\d\d\d')
+secretFound = mySecretKey.search('There are a secret key: 132 or 143')
+
+# print('My secret key founded: ' + secretFound.group(2))
+# print('Phone number found: ' + mo.group())
+
+# mynameissecret = re.compile(r'Carlos')
+# inputName = input()
+# nameFounded = mynameissecret.search(inputName)
+# name = nameFounded.group()
+
+# print('The name is %s' % name)
+
+# firstWords = re.compile(r'Bat(man|mobile|copter|bat)')
+
+# firstFounded = firstWords.search('There is my Batcopter')
+
+# print(firstFounded.group(0))
+
+# optionalRegex = re.compile(r'\d\d(\d)?')
+# option = input()
+# optional = optionalRegex.search(option)
+# print(optional.group())
+
+# multipleRegex = re.compile(r'Red (Blue)* Green')
+# multiple = multipleRegex.search('Red  Green')
+
+# print(multiple.group())
+
+# multiple1Regex = re.compile(r'\w+')
+# longest = input()
+# multiple1 = multiple1Regex.search(longest)
+# print(multiple1.group())
+
+# Py(thon)+hub
+# multiple2Regex = re.compile(r'(\w){4,24}')
+# multiple2 = multiple2Regex.search('P445') 
+# print(multiple2.group()[0])
+
+#! Greedy and Non-greedy Matchin
+
+# multiple3Regex = re.compile(r'(hello){1,5}')
+# lons = input()
+# multiple3 = multiple3Regex.search(lons)
+# print(multiple3.group())
+
+#* Non-greedy
+# multiple4Regex = re.compile(r'(hello){1,5}?')
+# lons = input()
+# multiple4 = multiple4Regex.search(lons)
+# print(multiple4.group())
+
+#! findall() method
+
+# multiple5Regex = re.compile(r'\d\d\d\d-\d\d\d\d-\d\d\d') # () To make for tuple and not list
+# multiple5 = multiple5Regex.findall('''This is my number 5489-7192-001 and 
+# my house number 5081-1789-1203''')
+# print(multiple5)
+
+#! Making own Character Classes
+
+# multiple6Regex = re.compile(r'[H]') #* Range with 0-9
+# In = input()
+# multiple6 = multiple6Regex.search(In)
+# print(multiple6.group())
+
+# multiple7Regex = re.compile(r'[^aeiouAEIOU]') #* Match characters that are not in the class
+
+# multiple8Regex = re.compile(r'^Hello') #* Use when want to use an specify character in begin
+# multiple9Regex = re.compile(r'Hello$') #* Use when want to use an specify character final
+
+#! Wildcard Character
+#* Matching any character except for a newline
+
+# multipleRegex10 = re.compile(r'.at')
+# multiple10 = multipleRegex10.findall('The cat in the hat sat on the flat mat.')
+# print(multiple10)
+
+# TODO : re.I without worrying wheter they're uppercase or lowercase
+
+#! Substituting strings with the sub() method
+
+Agent = re.compile(r'Agent \w+')
+Regex001 = Agent.sub('Censored', 'Agent Bark gave the secret document to Agent Bob')
+# print(Regex001)
+
+#TODO re.IGNORECASE | re.DOTALL | re.VERBOSE   
 
 

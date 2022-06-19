@@ -11,10 +11,7 @@ while True:
     if a != ('Yes' or 'yes' or 'Y' or 'y' or 'No' or 'no' or 'N' or 'n'):
         print('Please try again and respomd with yes or no') 
         continue
-
-
-
-    # a = input('Would you like to continue? ')
+   # a = input('Would you like to continue? ')
     # if a == 'No':
     #     print('Exiting')
     #     break
