@@ -2,13 +2,11 @@
 # if 5 > 3: 
 #     print ('esto es verdadero')
 '''
-
 Asignacion de variables
 
 '''
 x = 5 
 y = 'Juan'
-
 
 #print (x, y)
 

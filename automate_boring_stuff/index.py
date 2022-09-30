@@ -190,5 +190,3 @@ def priceOfSandwich(breadP,proteinP,cheeseP,additionalP,sandwichP):
     return totalPrice
 # print(priceOfSandwich(selectBread,selectProtein,typeOfCheese,additional,sandwichQuantity))
 
-
-

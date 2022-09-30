@@ -1,4 +1,4 @@
-
+console.log('Hola')
 //document.write('<h1>Hello World, Javascript</h1>')
 
 //console.error('Mi error custimizado')
@@ -132,3 +132,5 @@ function Greeting(Args){
 }
 
 Greeting('World');
+
+console.table()

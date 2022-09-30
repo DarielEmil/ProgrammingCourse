@@ -1,6 +1,6 @@
 #TODO: Select you own adventure
 
-import pyinputplus as Pi
+# import pyinputplus as Pi
 
 
 pages = [" Al principio pensé que era algún camión pasando a gran velocidad,\n pero el temblor se sostubo... Me desperte de golpe y pensé -ES UN TEMBLOR!...\n What do you want to do? \n1) Esperar a que pase 2)Salir corriendo 3) Pedir ayuda", "Me quede inmóvil, esperando a que el temblor pase...\n De repente se hizo la oscuridad... \nHubo mucho ruido... Sentí que algo se caía...... \n What do you want to do? \n1) ... 2) ... 3) ...", "Once upon a time ... \n What do you want to do? \n1) ... 2) ... 3) ..."]
@@ -63,3 +63,4 @@ o.close()
 # else:
     # userName = input('Please enter your user name: ')
     # password = input('Please enter your password: ')
+

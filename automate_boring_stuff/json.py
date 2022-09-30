@@ -45,6 +45,7 @@ outputDictWriter.writerow({'name': key}), to add content into the dictionary
 # print(jsonDataAsPythonValue)
 
 #WARNING: Writing Json with dumps() function
+import json 
 
 pythonValue = {'isCat':True, 'miceCaught': 0,'name':'Zophie','felineIQ':None }
 import json
